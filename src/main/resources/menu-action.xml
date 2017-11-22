@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<menus type="special" name="MenuTraining" text="Menu Training" objid="PG-TR-00">
+    <menuItem>
+        <objid>PG-TR-TUGAS-01</objid>
+        <name>Menu MASTER BRANCH</name>
+        <text>Menu MASTER BRANCH</text>
+        <!--//untuk antisipasi ketika menu item diklik-->
+        <action>com.bits.bee.plugintraining.action.FrmMasterBranchAction</action> 
+    </menuItem>
+    <menuItem>
+        <objid>PG-TR-02</objid>
+        <name>Menu Pegawai</name>
+        <text>Menu Pegawai</text>        
+        <action>com.bits.bee.plugintraining.action.FrmPegawaiAction</action> 
+    </menuItem>
+    <menuItem>
+        <objid>PG-TR-TUGAS-02</objid>
+        <name>Menu Master Salesman</name>
+        <text>Menu Master Salesman</text>
+        <action>com.bits.bee.plugintraining.action.FrmSalesmanAction</action> 
+    </menuItem>
+    <menuItem>
+        <objid>PG-TR-TUGAS-03</objid>
+        <name>Menu Master Salesman</name>
+        <text>Menu Master Salesman</text>
+        <action>com.bits.bee.plugintraining.action.FrmSalesmanAction2</action> 
+    </menuItem>
+    <menuItem>
+        <objid>PG-TR-03</objid>
+        <name>Menu Transaksi Stock</name>
+        <text>Menu Transaksi Stock</text>
+        <action>com.bits.bee.plugintraining.action.FrmTransaksiStockAction</action> 
+    </menuItem>
+    <menuItem>
+        <objid>PG-TR-TUGAS3-03</objid>
+        <name>Menu Transaksi Penjualan</name>
+        <text>Menu Transaksi Penjualan</text>
+        <action>com.bits.bee.plugintraining.action.FrmTransaksiPenjualanAction</action> 
+    </menuItem>
+    <menuItem>
+        <objid>PG-TR-04</objid>
+        <name>Menu Laporan Transaksi Stock</name>
+        <text>Menu Laporan Transaksi Stock</text>
+        <action>com.bits.bee.plugintraining.action.FrmRptTransaksiStockAction</action> 
+    </menuItem>
+</menus>

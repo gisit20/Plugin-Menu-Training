@@ -1,0 +1,14 @@
+CREATE OR REPLACE FUNCTION spStock_New_Training (
+	__Sadjno VARCHAR
+) RETURNS SETOF SPSTATUS AS $BODY$
+DECLARE
+	_retval SPSTATUS%ROWTYPE;
+	_spret SPSTATUS%ROWTYPE;
+
+BEGIN
+	
+	_retval:=(0,’OK’);
+	RETURN NEXT _retval;
+END;
+$BODY$
+LANGUAGE 'plpgsql' VOLATILE;

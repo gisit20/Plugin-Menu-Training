@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin>
+    <name>Plugin Training</name>
+    <description>Plugin untuk pendalaman struktur Bee</description>
+    <version>1.0</version>
+    <needReboot>true </needReboot> <!--//if need reboot = true-->
+<!--    <deActivatable>false</deActivatable> //
+    <active></active> //boleh tidak ada
+    <registered></registered> //boleh tidak ada
+    <key></key> // untuk plugin yang berbayar harus diisi-->
+</plugin>

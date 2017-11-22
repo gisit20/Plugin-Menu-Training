@@ -1,0 +1,18 @@
+CREATE OR REPLACE FUNCTION spStock_Void_Training (
+	__SadjNo VARCHAR
+) RETURNS SETOF SPSTATUS AS 
+$BODY$
+DECLARE
+	_retval SPSTATUS%ROWTYPE;
+	_spret SPSTATUS%ROWTYPE;
+
+BEGIN
+	
+	DELETE FROM sadjd WHERE sadjno=__SAdjNo;
+	DELETE FROM sadj WHERE sadjno=__SAdjNo;
+
+	_retval:=(0,'OK');
+	RETURN NEXT _retval;
+END;
+$BODY$
+LANGUAGE 'plpgsql' VOLATILE;
