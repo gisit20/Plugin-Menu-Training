@@ -7,6 +7,7 @@ package com.bits.bee.plugintraining.ui.component;
 
 import com.bits.bee.ui.DlgItem;
 import com.bits.lib.dbswing.JBSPicker;
+import java.awt.Dimension;
 
 /**
  *
@@ -16,7 +17,8 @@ public class SPikItem extends JBSPicker {
     
     public SPikItem(){
         setDialog(DlgItem.getInstance());
-        
+        setPreferredSize(new Dimension(180, 19));
+        setToolTipText("Pilih Item");
         
     }
     

@@ -7,9 +7,11 @@ package com.bits.bee.plugintraining.ui;
 
 import com.bits.bee.confui.FileInfo;
 import com.bits.bee.ui.BReportFrame;
+import com.bits.bee.ui.imageMgr;
 import com.bits.lib.dx.BDM;
 import com.bits.lib.dx.JBSQL;
 import java.sql.Connection;
+import java.util.HashMap;
 import net.sf.jasperreports.engine.JasperCompileManager;
 import net.sf.jasperreports.engine.JasperFillManager;
 import net.sf.jasperreports.engine.JasperPrint;
@@ -23,8 +25,6 @@ import net.sf.jasperreports.engine.xml.JRXmlLoader;
  */
 public class FrmRptTransaksiStock extends BReportFrame {
 
-    JasperPrint jasperPrint;
-    
     /**
      * Creates new form FrmRptTransaksiStock
      */
@@ -212,11 +212,11 @@ public class FrmRptTransaksiStock extends BReportFrame {
                 + "JOIN sadjd d ON d.sadjno=m.sadjno "
                 + "JOIN wh ON wh.whid=d.whid "
                 + "JOIN item i ON i.itemid=d.itemid "
-                + "LEFT JOIN emp ON emp.empid=m.empid");
+                + "LEFT JOIN emp e ON e.empid=m.empid");
 
         JBSQL.ANDFilterPeriode(filter, "sadjdate", jBOSPeriode1);
         JBSQL.ANDFilterPicker(filter, "m.empid", pikCust1);
-        JBSQL.ANDFilterCombo(filter, "branchid", jCboBranch1);
+        JBSQL.ANDFilterCombo(filter, "m.branchid", jCboBranch1);
 
         JBSQL.setWHERE(sql, filter);
 
@@ -231,6 +231,15 @@ public class FrmRptTransaksiStock extends BReportFrame {
 
         //buat koneksi
         Connection conn = BDM.getDefault().getDatabase().getJdbcConnection();
-        jasperPrint = JasperFillManager.fillReport(jrReport, null, conn);
+        
+        //tambahkan variabel gambar dll
+        HashMap parameter = new HashMap();
+        parameter.put("STARTDATE", jBOSPeriode1.getStartDate());
+        parameter.put("ENDDATE", jBOSPeriode1.getEndDate());
+        parameter.put("IMG", imageMgr.getInstance().getFile().toString()); //set gambar
+        
+        
+        
+        jasperPrint = JasperFillManager.fillReport(jrReport, parameter, conn);
     }
 }

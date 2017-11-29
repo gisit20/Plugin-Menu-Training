@@ -46,12 +46,15 @@ public class SAdjTransTraining extends BTrans {
     @Override
     public void New() {
         super.New();
+        //biar auto number
         getDataSetMaster().setString("sadjno", "AUTO");
+        //mengeset tg menjadi tg hari ini
         getDataSetMaster().setDate("sadjdate", BHelp.getCurrentDate_SQL());
     }
 
     @Override
     public void Save() throws Exception {
+        //mengurutkan nodata
         BLUtil.renumberDetail(this, "sadjdno");
         super.Save();
     }

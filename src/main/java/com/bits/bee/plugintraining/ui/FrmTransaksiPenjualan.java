@@ -53,7 +53,7 @@ public class FrmTransaksiPenjualan extends InternalFrameTrans implements Propert
 
     private void initTable() {
         DataSet ds = trans.getDataSetDetail();
-
+//buat piker dalam table
 //        SPikItem pikItem = new SPikItem();
         for (int i = 0; i < ds.getColumnCount(); i++) {
             ds.getColumn(i).setVisible(0);

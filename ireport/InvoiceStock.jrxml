@@ -23,6 +23,9 @@
 	<import value="net.sf.jasperreports.engine.*" />
 	<import value="net.sf.jasperreports.engine.data.*" />
 
+	<parameter name="IMG" isForPrompting="false" class="java.lang.String"/>
+	<parameter name="STARTDATE" isForPrompting="false" class="java.util.Date"/>
+	<parameter name="ENDDATE" isForPrompting="false" class="java.util.Date"/>
 	<queryString><![CDATA[SELECT m.sadjno, sadjdate, m.empid, empname, sadjnote, sadjdno, d.itemid, itemdesc, qty, unit,
 wh.whid, whname
 FROM sadj m 
@@ -234,17 +237,17 @@ ORDER BY m.sadjno]]></queryString>
 						height="21"
 						key="staticText-11"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
-					<textElement textAlignment="Center" verticalAlignment="Middle">
-						<font pdfFontName="Helvetica-Bold" isBold="true"/>
+					<textElement textAlignment="Right" verticalAlignment="Middle">
+						<font pdfFontName="Helvetica" isBold="false"/>
 					</textElement>
 				<text><![CDATA[Total:]]></text>
 				</staticText>
 				<elementGroup><!--  Start: 1 !-->
 				<textField isStretchWithOverflow="false" pattern="##0.####" isBlankWhenNull="false" evaluationTime="Group" evaluationGroup="sadlnoHeader"  hyperlinkType="None"  hyperlinkTarget="Self" >
 					<reportElement
-						x="381"
+						x="363"
 						y="2"
-						width="66"
+						width="103"
 						height="21"
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
@@ -266,7 +269,7 @@ ORDER BY m.sadjno]]></queryString>
 			</band>
 		</title>
 		<pageHeader>
-			<band height="50"  isSplitAllowed="true" >
+			<band height="73"  isSplitAllowed="true" >
 				<staticText>
 					<reportElement
 						x="140"
@@ -280,6 +283,69 @@ ORDER BY m.sadjno]]></queryString>
 					</textElement>
 				<text><![CDATA[Invoice Stock]]></text>
 				</staticText>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="342"
+						y="41"
+						width="100"
+						height="18"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$P{ENDDATE}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="false" isBlankWhenNull="false" evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="199"
+						y="41"
+						width="100"
+						height="18"
+						key="textField"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center">
+						<font/>
+					</textElement>
+				<textFieldExpression   class="java.util.Date"><![CDATA[$P{STARTDATE}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement
+						x="106"
+						y="39"
+						width="84"
+						height="18"
+						key="staticText-12"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font/>
+					</textElement>
+				<text><![CDATA[Periode:]]></text>
+				</staticText>
+				<staticText>
+					<reportElement
+						x="306"
+						y="40"
+						width="30"
+						height="18"
+						key="staticText-13"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="Thin" bottomBorderColor="#000000"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font/>
+					</textElement>
+				<text><![CDATA[s/d]]></text>
+				</staticText>
+				<image  evaluationTime="Now" hyperlinkType="None"  hyperlinkTarget="Self" >
+					<reportElement
+						x="0"
+						y="0"
+						width="94"
+						height="55"
+						key="image-1"/>
+					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
+					<graphicElement stretchType="NoStretch"/>
+					<imageExpression class="java.lang.String"><![CDATA[$P{IMG}]]></imageExpression>
+				</image>
 			</band>
 		</pageHeader>
 		<columnHeader>

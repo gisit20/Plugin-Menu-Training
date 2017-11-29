@@ -71,20 +71,26 @@ public class FrmTransaksiStock extends InternalFrameTrans implements PropertyCha
 
     private void initTable() {
         DataSet ds = trans.getDataSetDetail();
-
+//bila pakai piker manual
 //        SPikItem pikItem = new SPikItem();
+        
+        //untuk loping kolom
         for (int i = 0; i < ds.getColumnCount(); i++) {
             ds.getColumn(i).setVisible(0);
         }
 
+        //bila pakai piker manual
 //        ds.getColumn("itemid").setVisible(1);
 //        ds.getColumn("itemid").setItemEditor(new BCellEditor(pikItem));
-//        
+//      
+        //buat meload kolom" yang penting secara otomatis, 
+        //jaadi yg ds.getColumn("namaKolom") tidak perlu
         UIMgr.setDataSetDetailTrans(ds);
+        //set manual penimoran tiap tabel yg menjadi PK
         ds.getColumn("sadjdno").setCaption("No");
         ds.getColumn("sadjdno").setWidth(4);
         ds.getColumn("sadjdno").setVisible(1);
-
+        //hilangkan colom yg tidak perlu
         ds.getColumn("prjid").setVisible(0);
         ds.getColumn("deptid").setVisible(0);
         ds.getColumn("pid").setVisible(0);
@@ -463,7 +469,6 @@ public class FrmTransaksiStock extends InternalFrameTrans implements PropertyCha
                 p.setshowPrintDialog(false);
             }
             p.print();
-
         }
     }
 
@@ -509,7 +514,7 @@ public class FrmTransaksiStock extends InternalFrameTrans implements PropertyCha
 
     @Override
     public void setTransState(int state) {
-//        this.state.setState(state);
+//        state.setState(state);
     }
 
     @Override

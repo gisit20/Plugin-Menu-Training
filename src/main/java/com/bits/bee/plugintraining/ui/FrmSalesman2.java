@@ -66,7 +66,6 @@ public class FrmSalesman2 extends InternalFrameTrans implements PropertyChangeLi
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        cityid = new com.bits.bee.ui.myswing.JCboCity();
         jLabel8 = new javax.swing.JLabel();
         srepid = new com.bits.bee.ui.myswing.BTextIDField();
         srepname = new com.bits.lib.dbswing.JBdbTextField();
@@ -117,47 +116,56 @@ public class FrmSalesman2 extends InternalFrameTrans implements PropertyChangeLi
 
         jLabel2.setFont(new java.awt.Font("Bitstream Vera Sans", 0, 11)); // NOI18N
         jLabel2.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.jLabel2.text")); // NOI18N
+        jPanel1.add(jLabel2);
 
         jLabel3.setFont(new java.awt.Font("Bitstream Vera Sans", 0, 11)); // NOI18N
         jLabel3.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.jLabel3.text")); // NOI18N
+        jPanel1.add(jLabel3);
 
         jLabel4.setFont(new java.awt.Font("Bitstream Vera Sans", 0, 11)); // NOI18N
         jLabel4.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.jLabel4.text")); // NOI18N
+        jPanel1.add(jLabel4);
 
         jLabel5.setFont(new java.awt.Font("Bitstream Vera Sans", 0, 11)); // NOI18N
         jLabel5.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.jLabel5.text")); // NOI18N
+        jPanel1.add(jLabel5);
 
         jLabel6.setFont(new java.awt.Font("Bitstream Vera Sans", 0, 11)); // NOI18N
         jLabel6.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.jLabel6.text")); // NOI18N
+        jPanel1.add(jLabel6);
 
         jLabel7.setFont(new java.awt.Font("Bitstream Vera Sans", 0, 11)); // NOI18N
         jLabel7.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.jLabel7.text")); // NOI18N
-
-        cityid.setColumnName(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.cityid.columnName")); // NOI18N
-        cityid.setDataSet(srep.getDataSet());
+        jPanel1.add(jLabel7);
 
         jLabel8.setFont(new java.awt.Font("Bitstream Vera Sans", 0, 11)); // NOI18N
         jLabel8.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.jLabel8.text")); // NOI18N
+        jPanel1.add(jLabel8);
 
         srepid.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.srepid.text")); // NOI18N
         srepid.setColumnName(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.srepid.columnName")); // NOI18N
         srepid.setDataSet(srep.getDataSet());
+        jPanel1.add(srepid);
 
         srepname.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.srepname.text")); // NOI18N
         srepname.setColumnName(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.srepname.columnName")); // NOI18N
         srepname.setDataSet(srep.getDataSet());
+        jPanel1.add(srepname);
 
         mobile.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.mobile.text")); // NOI18N
         mobile.setColumnName(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.mobile.columnName")); // NOI18N
         mobile.setDataSet(srep.getDataSet());
+        jPanel1.add(mobile);
 
         email.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.email.text")); // NOI18N
         email.setColumnName(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.email.columnName")); // NOI18N
         email.setDataSet(srep.getDataSet());
+        jPanel1.add(email);
 
         phone.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.phone.text")); // NOI18N
         phone.setColumnName(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.phone.columnName")); // NOI18N
         phone.setDataSet(srep.getDataSet());
+        jPanel1.add(phone);
 
         srepname1.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.srepname1.text")); // NOI18N
         srepname1.setColumnName(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.srepname1.columnName")); // NOI18N
@@ -167,6 +175,7 @@ public class FrmSalesman2 extends InternalFrameTrans implements PropertyChangeLi
                 srepname1ActionPerformed(evt);
             }
         });
+        jPanel1.add(srepname1);
 
         addr.setColumns(20);
         addr.setRows(5);
@@ -174,93 +183,16 @@ public class FrmSalesman2 extends InternalFrameTrans implements PropertyChangeLi
         addr.setDataSet(srep.getDataSet());
         jScrollPane1.setViewportView(addr);
 
+        jPanel1.add(jScrollPane1);
+
         jLabel9.setFont(new java.awt.Font("Bitstream Vera Sans", 0, 11)); // NOI18N
         jLabel9.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.jLabel9.text")); // NOI18N
+        jPanel1.add(jLabel9);
 
         jdbCheckBox1.setText(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.jdbCheckBox1.text")); // NOI18N
         jdbCheckBox1.setColumnName(org.openide.util.NbBundle.getMessage(FrmSalesman2.class, "FrmSalesman2.jdbCheckBox1.columnName")); // NOI18N
         jdbCheckBox1.setDataSet(srep.getDataSet());
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel7, javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jdbCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jScrollPane1)
-                            .addComponent(mobile, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(email, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(cityid, javax.swing.GroupLayout.PREFERRED_SIZE, 114, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(18, 18, 18)
-                                .addComponent(jLabel9)
-                                .addGap(0, 71, Short.MAX_VALUE))
-                            .addComponent(phone, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGap(0, 0, Short.MAX_VALUE)
-                                .addComponent(srepname1, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(srepname, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(srepid, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addGap(37, 37, 37))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(srepid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel3)
-                    .addComponent(srepname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(6, 6, 6)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel4)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 7, Short.MAX_VALUE)))
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mobile, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel5)
-                            .addComponent(cityid, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel9)
-                            .addComponent(srepname1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel6)
-                            .addComponent(phone, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel7)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel8)
-                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jdbCheckBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(12, 12, 12))
-        );
-
-        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jLabel2, jLabel3, jLabel4, jLabel5, jLabel6, jLabel7, jLabel8, srepid});
+        jPanel1.add(jdbCheckBox1);
 
         jLabel1.setFont(new java.awt.Font("Bitstream Vera Sans", 1, 12)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(102, 102, 102));
@@ -290,7 +222,7 @@ public class FrmSalesman2 extends InternalFrameTrans implements PropertyChangeLi
                 .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(177, Short.MAX_VALUE))
         );
 
         pack();
@@ -327,7 +259,6 @@ public class FrmSalesman2 extends InternalFrameTrans implements PropertyChangeLi
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private com.borland.dbswing.JdbTextArea addr;
-    private com.bits.bee.ui.myswing.JCboCity cityid;
     private com.bits.lib.dbswing.JBdbTextField email;
     private com.bits.lib.dbswing.JBToolbar jBToolbar1;
     private javax.swing.JLabel jLabel1;

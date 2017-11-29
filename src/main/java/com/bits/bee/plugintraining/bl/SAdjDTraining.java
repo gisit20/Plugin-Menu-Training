@@ -82,10 +82,12 @@ public class SAdjDTraining extends BTable implements ColumnChangeListener, DataC
 
     @Override
     public void changed(DataSet ds, Column column, Variant vrnt) {
+        //bila kolom itemid berubah nilai dan itemid ada isinya
         if(column.getColumnName().equalsIgnoreCase("itemid") && ds.getString("itemid").length()>0){ //mengeset quantyty sama unit saja
             BigDecimal qty = BigDecimal.ONE;
-            
+            //mengeset nilai qty menjadi 1
             setBigDecimal("qty", qty);
+            //meload isi nilai unit sesuai nilai item id
             setString("unit", ItemList.getInstance().getStockUnit(getString("itemid")));
             dataset.post();            
         }

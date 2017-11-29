@@ -38,6 +38,25 @@
         <text>Menu Transaksi Penjualan</text>
         <action>com.bits.bee.plugintraining.action.FrmTransaksiPenjualanAction</action> 
     </menuItem>
+    
+    <separator>
+        <objid></objid>
+    </separator>
+    <menuItem>
+        <objid>PG-TR-16</objid>
+        <name>Import Pegawai</name>
+        <text>Import Pegawai</text>
+        <action>com.bits.bee.plugintraining.action.FrmPegawaiImportAction</action> 
+    </menuItem>
+    <menuItem>
+        <objid>PG-TR-TUGAS-16</objid>
+        <name>Import Salesman</name>
+        <text>Import Salesman</text>
+        <action>com.bits.bee.plugintraining.action.FrmSalesmanImportAction</action> 
+    </menuItem>
+    <separator>
+        <objid></objid>
+    </separator>
     <menuItem>
         <objid>PG-TR-04</objid>
         <name>Menu Laporan Transaksi Stock</name>
